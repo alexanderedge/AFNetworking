@@ -484,7 +484,7 @@ static void AFNetworkReachabilityReleaseCallback(const void *info) {
     NSParameterAssert(method);
     NSParameterAssert(![method isEqualToString:@"GET"] && ![method isEqualToString:@"HEAD"]);
 
-    NSMutableURLRequest *request = [self requestWithMethod:method path:path parameters:nil];
+    NSMutableURLRequest *request = [self requestWithMethod:method path:path parameters:parameters];
 
     __block AFStreamingMultipartFormData *formData = [[AFStreamingMultipartFormData alloc] initWithURLRequest:request stringEncoding:self.stringEncoding];
 
